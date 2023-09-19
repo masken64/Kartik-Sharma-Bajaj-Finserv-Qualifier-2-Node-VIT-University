@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const serverless = require('serverless-http');
+
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -48,6 +50,5 @@ app.get('/bfhl', (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`The server is live on - ${port}`);  //returning port number
-});
+app.use('/.netlify/functions/app', router);
+module.exports.handler = serverless(app);

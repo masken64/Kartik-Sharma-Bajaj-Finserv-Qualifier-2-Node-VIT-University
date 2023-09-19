@@ -1,13 +1,10 @@
 {
   "name": "bfhl-api",
   "version": "1.0.0",
+  "description": "Made by Kartik Sharma",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js"
-  },
-  "description": "Kartik Sharma",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "netlify deploy --prod"
   },
   "keywords": [],
   "author": "",
