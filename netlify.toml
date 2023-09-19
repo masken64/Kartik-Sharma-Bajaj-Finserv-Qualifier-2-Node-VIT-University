@@ -1,0 +1,10 @@
+[build]
+  command = "npm install && npm run build" 
+  functions = "lambda"
+  publish = "public" 
+
+[dev]
+  functionsPort = 3000
+
+[context.production]
+  command = "npm run build"
